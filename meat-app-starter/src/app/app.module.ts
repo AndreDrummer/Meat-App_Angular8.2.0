@@ -1,0 +1,33 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+
+import { ROUTES } from './app.routes';
+
+import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { AboutComponent } from './about/about.component';
+import { RestaurantsComponent } from './restaurants/restaurants.component';
+import { RestaurantComponent } from './restaurants/restaurant/restaurant.component';
+import { HomeComponent } from './home/home.component'
+import { RestaurantsService } from './restaurants/restaurantsService';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    AboutComponent,
+    RestaurantsComponent,
+    RestaurantComponent,
+    HomeComponent
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    RouterModule.forRoot(ROUTES)
+  ],
+  providers: [RestaurantsService],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
