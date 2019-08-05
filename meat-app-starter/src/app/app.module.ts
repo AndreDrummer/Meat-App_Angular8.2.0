@@ -25,6 +25,8 @@ import  localePt  from '@angular/common/locales/br';
 import  Pt  from '@angular/common/locales/br';
 import { LOCALE_ID } from '@angular/core';
 import { OrderComponent } from './order/order.component';
+import { InputComponent } from './shared/input/input.component';
+import { RadioComponent } from './shared/radio/radio.component';
 
 registerLocaleData(localePt, 'pt-BR');
 
@@ -41,7 +43,9 @@ registerLocaleData(localePt, 'pt-BR');
     ShoppingCartComponent,
     MenuItemComponent,
     ReviewsComponent,
-    OrderComponent
+    OrderComponent,
+    InputComponent,
+    RadioComponent
   ],
   imports: [
     BrowserModule,
