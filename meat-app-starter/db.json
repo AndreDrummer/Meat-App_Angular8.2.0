@@ -370,5 +370,31 @@
       "restaurantId": "tasty-treats"
     }
   ],
-  "orders": []
+  "orders": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "address": "sdasdaf",
+      "number": "3425324",
+      "optionalAddress": "",
+      "paymentOption": "CRE",
+      "orderItem": [
+        {
+          "quantity": 4,
+          "menuId": "burger"
+        }
+      ],
+      "id": 5
+    }
+  ]
 }
