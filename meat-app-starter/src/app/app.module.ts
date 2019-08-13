@@ -28,8 +28,11 @@ import { OrderComponent } from './order/order.component';
 import { InputComponent } from './shared/input/input.component';
 import { RadioComponent } from './shared/radio/radio.component';
 import { OrderItemsComponent } from './order/order-items/order-items.component';
+<<<<<<< HEAD
 import { OrderService } from './order/order.service';
 import { DeliveryCostsComponent } from './order/delivery-costs/delivery-costs.component';
+=======
+>>>>>>> ff956361cecda45d8366a16dc745dd5cd8e850b2
 
 registerLocaleData(localePt, 'pt-BR');
 
@@ -49,8 +52,12 @@ registerLocaleData(localePt, 'pt-BR');
     OrderComponent,
     InputComponent,
     RadioComponent,
+<<<<<<< HEAD
     OrderItemsComponent,
     DeliveryCostsComponent
+=======
+    OrderItemsComponent
+>>>>>>> ff956361cecda45d8366a16dc745dd5cd8e850b2
   ],
   imports: [
     BrowserModule,
