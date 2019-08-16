@@ -40,10 +40,9 @@ export class OrderService {
   }
 
   checkOrder(order: Order): Observable<string> {
-    console.log(`Service: `, order);
     const options = { headers: new HttpHeaders({'Content-Type':  'application/json'}) }
     // headers.append('Content-Type',  'application/json')
-    return this.http.post<string>(`${MEAT_API}/orders`, JSON.stringify(order), options)
-    .pipe(catchError(ErrorHandler.handleError))
+    return this.http.post(`${MEAT_API}/orders`, JSON.stringify(order), options)
+    .pipe(map(res => res['id']),  catchError(ErrorHandler.handleError));
   }
 }

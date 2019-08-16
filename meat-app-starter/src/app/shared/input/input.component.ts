@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, AfterContentInit, ContentChild } from '@angular/core';
-import { NgModel } from '@angular/forms';
+import { NgModel, FormControlName } from '@angular/forms';
 
 @Component({
   selector: 'mt-input-content',
@@ -14,6 +14,7 @@ export class InputComponent implements OnInit, AfterContentInit {
   input: any;
 
   @ContentChild(NgModel, {static: false}) model: NgModel; // static false = Angular 8
+  @ContentChild(FormControlName, {static: false}) formControl: NgModel; // static false = Angular 8
 
   constructor() { }
 
@@ -21,9 +22,9 @@ export class InputComponent implements OnInit, AfterContentInit {
   }
 
   ngAfterContentInit() {
-    this.input = this.model
+    this.input = this.model || this.formControl
     if (this.input === undefined) {
-      throw new Error('This compoenent should be used with a ngModel directive.');
+      throw new Error('This compoenent should be used with a ngModel or a formControl directive.');
     }
   }
 

@@ -19,7 +19,7 @@
             <th style="width:60%">({{item.quantity}}x) {{item.menuItem.name}}</th>
             <td class="text-right">{{item.value()|currency:"BRL":"symbol"}}</td>
             <td class="text-right">
-              <a (click)="remove()" class="btn btn-sm btn-danger"><i class="fa fa-remove"></i></a>
+              <a (click)="remove()" class="btn btn-sm danger"><i class="fa fa-remove"></i></a>
             </td>
           </tr>
           <tr>
@@ -31,9 +31,9 @@
     </div>
   </div>
   <div class="box-footer" *ngIf="items().length">
-    <div class="pull-right">
-      <button (click)="clear()"type="button" class="btn btn-danger"><i class="fa fa-trash"></i> Limpar</button>
-      <a [routerLink]="['/order']" class="btn btn-success"><i class="fa fa-credit-card"></i> Fechar Pedido</a>
+    <div>
+      <button (click)="clear()"type="button" class="btn btn-danger pull-left"><i class="fa fa-trash"></i> Limpar</button>
+      <a [routerLink]="['/order']" class="btn btn-success pull-right"><i class="fa fa-credit-card"></i> Fechar Pedido</a>
     </div>
   </div>
 </div>
